@@ -1,12 +1,13 @@
 package ma.projet.bean;
 
+import ma.projet.abstract2.Afficher;
 import ma.projet.inter.IAffichage;
 import ma.projet.inter.IOperation;
 
 /**
  * Complexe
  */
-public class Complexe implements IAffichage,IOperation {
+public class Complexe extends Afficher implements IOperation {
 
    double im;
    double re;

@@ -1,12 +1,13 @@
 package ma.projet.bean;
 
+import ma.projet.abstract2.Afficher;
 import ma.projet.inter.IAffichage;
 import ma.projet.inter.IOperation;
 
 /**
  * Reel
  */
-public class Reel implements IAffichage, IOperation {
+public class Reel extends Afficher implements  IOperation {
 
    double x;
 
@@ -32,7 +33,7 @@ public class Reel implements IAffichage, IOperation {
       return null;
    }
 
-   @Override
+   
    public String afficher() {
       // TODO Auto-generated method stub
       String val = "\nx : "+x;
