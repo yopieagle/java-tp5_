@@ -29,10 +29,10 @@ public class Personne implements IPersonne {
    public void afficher() {
       // TODO Auto-generated method stub
       if(profile.libelle == "directeur") {
-         String res = "je suis le directeur "+nom+" "+prenom+" né le "+dateNais.toString()+" mon salaire est "+salaire+" Dhm";
+         String res = "je suis le directeur "+nom+" "+prenom+" né le "+dateNais.toString()+" mon salaire est "+calculerSalaire()+" Dhm";
          System.out.println(res);
       } else if(profile.libelle == "employé") {
-         String res = "je suis l'employé "+nom+" "+prenom+" né le "+dateNais.toString()+" mon salaire est "+salaire+" Dhm";
+         String res = "je suis l'employé "+nom+" "+prenom+" né le "+dateNais.toString()+" mon salaire est "+calculerSalaire()+" Dhm";
          System.out.println(res);
       }
 
@@ -43,8 +43,12 @@ public class Personne implements IPersonne {
       // TODO Auto-generated method stub
       if(profile.code == 1) {
          //directeur
-         return salaire* 1.2;
+         salaire = salaire* 1.2;
+         return salaire;
+      } else {
+         salaire = salaire* 1.1;
+         return salaire;
       }
-      return salaire* 1.1;
+      
    }
 }
